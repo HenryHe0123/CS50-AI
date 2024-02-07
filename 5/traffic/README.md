@@ -28,5 +28,5 @@ me that it is a common way to put the dropout layer **before** the dense layer r
 advice and found the effect surprisingly good, as shown above.
 
 Later, I tried the original idea, with the same configuration with version1 but swapping the order of the hidden layer
-and dropout layer. The new model was saved as `models/v0.h5`. It turned out that the model is under-fitting in this
+and dropout layer. The new model was saved as `models/v0.h5`. It turned out that the model was under-fitting in this
 case, with a poor testing accuracy of 0.0550.
