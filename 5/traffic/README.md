@@ -1,4 +1,4 @@
-# Traffic Lab Report
+# Traffic
 
 Dataset: [GTSRB](https://cdn.cs50.net/ai/2023/x/projects/5/gtsrb.zip) - German Traffic Sign Recognition Benchmark.
 
@@ -22,11 +22,11 @@ Here are some models that I have trained and saved under the directory `models`:
 | 3       | 128 filters, 4x4 kernel | 256 filters, 2x2 kernel | 0.9538            | **0.9843**       | 128                | So far the best with some  fine-tuning! |
 | 4       | 256 filters, 4x4 kernel | 256 filters, 2x2 kernel | 0.9269            | 0.9627           | 256                | Larger scale doesn't always make sense. |
 
-It is worth mentioning that when constructing my first neural networks, I initially put the Dropout layer between the
-Output layer and the Hidden layer (similar to the lecture source code), and then asked GPT for advice. However, GPT told
-me that it is a common way to put Dropout layer **before** the Dense Layer rather than after it. I followed the advice
-and found the effect surprisingly good, as shown above.
+It is worth mentioning that when constructing my first neural network, I initially put the dropout layer between the
+output layer and the hidden layer (similar to the lecture source code), and then asked GPT for advice. However, GPT told
+me that it is a common way to put the dropout layer **before** the dense layer rather than after it. I followed the
+advice and found the effect surprisingly good, as shown above.
 
-Later, I tried the original idea, with the same configuration with Version1 but swapping the order of the hidden layer
+Later, I tried the original idea, with the same configuration with version1 but swapping the order of the hidden layer
 and dropout layer. The new model was saved as `models/v0.h5`. It turned out that the model is under-fitting in this
 case, with a poor testing accuracy of 0.0550.
